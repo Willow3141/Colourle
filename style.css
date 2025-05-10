@@ -1,0 +1,87 @@
+:root {
+    --r: 255;
+    --g: 255;
+    --b: 255;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(300, 60%, 70%);
+}
+
+#colourSquare {
+    position: absolute;
+    width: 50vh;
+    height: 50vh;
+    left: 50%;
+    top: 35vh;
+    transform: translate(-50%, -50%);
+    background-color: rgb(var(--r), var(--g), var(--b));
+    border: 3px solid black;
+    border-radius: 10%;
+}
+
+.answers-cont {
+    position: absolute;
+    width: 50vh;
+    height: 30vh;
+    left: 50%;
+    top: 78.5vh;
+    transform: translate(-50%, -50%);
+    background-color: hsl(300, 60%, 63%);
+    border: 3px solid black;
+    border-radius: 20px;
+    align-content: center;
+    justify-items: center;
+}
+
+.answers {
+    position: relative;
+    width: 45vh;
+    height: 25vh;
+    background-color: hsl(300, 60%, 60%);
+    border: 2px solid black;
+    border-radius: 3vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 40px;
+}
+
+.custom-field {
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+.custom-field input {
+    border: none;
+    appearance: none;
+    background-color: hsl(300, 50%, 70%);
+    padding: 9px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14px;
+}
+
+.custom-field .placeholder {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translate(-50%);
+    text-align: left;
+    color: hsl(300, 20%, 40%);
+    transition: all .3s ease;
+}
+
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder {
+    top: -1px;
+    font-size: 10px;
+    color: hsl(300, 20%, 35%)
+}
