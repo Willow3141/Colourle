@@ -1,7 +1,7 @@
 :root {
-    --r: 255;
-    --g: 255;
-    --b: 255;
+    --Mr: 255;
+    --Mg: 255;
+    --Mb: 255;
 }
 
 * {
@@ -13,23 +13,23 @@ body {
 }
 
 #colourSquare {
-    position: absolute;
+    position: relative;
     width: 50vh;
     height: 50vh;
     left: 50%;
     top: 35vh;
     transform: translate(-50%, -50%);
-    background-color: rgb(var(--r), var(--g), var(--b));
+    background-color: rgb(var(--Mr), var(--Mg), var(--Mb));
     border: 3px solid black;
     border-radius: 10%;
 }
 
 .answers-cont {
-    position: absolute;
+    position: relative;
     width: 50vh;
     height: 30vh;
     left: 50%;
-    top: 78.5vh;
+    top: 28vh;
     transform: translate(-50%, -50%);
     background-color: hsl(300, 60%, 63%);
     border: 3px solid black;
@@ -84,4 +84,24 @@ body {
     top: -1px;
     font-size: 10px;
     color: hsl(300, 20%, 35%)
+}
+
+#enter-val {
+    position: relative;
+    width: 20vh;
+    height: 10vh;
+    left: calc(50% + 25vh);
+    margin-left: 1vh;
+    background-color: hsl(300, 60%, 60%);
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#enter-val:hover {
+    cursor: pointer;
+}
+
+#enter-val:active {
+    background-color: hsl(300, 60%, 55%);
+    transform: scale(1.04);
 }
